@@ -9,7 +9,7 @@
 </head>
 <body>
 	<div id="wrapper">
-		<form class="form" method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+		<form class="form" method="POST" action="index.php">
 			<h2>Contact US</h2>
 			<input type="text" name="name" placeholder="Name">
 			<input type="email" name="email" placeholder="Email Address">
@@ -21,17 +21,3 @@
 	</div>
 </body>
 </html>
-<?php
-		if(isset($_POST['submit'])){
-			$to = "uveshmemon.um777@gmail.com";
-			$subject = $_POST['subject'];
-			$name = $_POST['name'];
-			$phone = $_POST['phone'];
-			$from = $_POST['email'];
-			$headers = "From : $from";
-
-			mail($to, $subject, $name, $phone, $headers);
-
-			echo "Mail Sent!";
-		}
-	?>
