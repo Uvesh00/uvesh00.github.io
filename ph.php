@@ -15,11 +15,7 @@ if(isset($_POST['submit'])){
     $body = "name : ".$name. "\r\n" .
     		"Phone : ".$phone. "\r\n" .
     		"Message : " . $body;
-    if(mail($to, $subject, $body , $headers)){
-        echo "Mail Sent!";
-    }else{
-         echo "Failed To Send Mail";
-    }
+   mail($to, $subject, $body , $headers);
 }
 
 ?>
